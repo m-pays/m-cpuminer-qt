@@ -17,7 +17,7 @@
    </sizepolicy>
   </property>
   <property name="windowTitle">
-   <string>ScryptMiner GUI</string>
+   <string>CPU Miner - Coin Magi</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QLabel" name="speedTitleLabel">
@@ -181,25 +181,45 @@
       </property>
       <item>
        <property name="text">
-        <string>Litecoinpool.org</string>
+        <string>pom.m-hash.com</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Pool-X</string>
+        <string>pow.magipool.info</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Elitist Jerks</string>
+        <string>suprnova.cc</string>
        </property>
       </item>
+
       <item>
        <property name="text">
-        <string>OzCoin LTC Pool</string>
+        <string>maxminers.net</string>
        </property>
       </item>
-     </widget>
+
+      <item>
+       <property name="text">
+        <string>xmgpool.cf</string>
+       </property>
+      </item>
+
+      <item>
+       <property name="text">
+        <string>suchpool.pw</string>
+       </property>
+      </item>
+
+      <item>
+       <property name="text">
+        <string>minerclaim.net</string>
+       </property>
+      </item>
+
+      </widget>
      <widget class="QLabel" name="poolLabel">
       <property name="geometry">
        <rect>
@@ -456,7 +476,7 @@ p, li { white-space: pre-wrap; }
       </rect>
      </property>
      <property name="text">
-      <string>Username</string>
+      <string>Worker or RPC Username</string>
      </property>
     </widget>
     <widget class="QLabel" name="rpcPasswordLabel">
@@ -482,7 +502,7 @@ p, li { white-space: pre-wrap; }
       </rect>
      </property>
      <property name="text">
-      <string>Port</string>
+      <string>Port (Pool or RPC)</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="rpcServerLine">
@@ -505,7 +525,7 @@ p, li { white-space: pre-wrap; }
       </rect>
      </property>
      <property name="text">
-      <string>RPC Server</string>
+      <string>Pool URL ("stratum+tcp://...") or RPC Server ("http://..." - solo mining)</string>
      </property>
     </widget>
     <widget class="QComboBox" name="threadsBox">

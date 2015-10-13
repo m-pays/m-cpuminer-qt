@@ -47,7 +47,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     initThreads = 0;
 
-    outputFile = new QFile("output.txt");
+    outputFile = new QFile("m-cpuminer.out");
 
     connect(readTimer, SIGNAL(timeout()), this, SLOT(readProcessOutput()));
     connect(poolTimer, SIGNAL(timeout()), this, SLOT(updatePoolData()));
@@ -170,24 +170,25 @@ void MainWindow::recordOutput(QString text)
         outputFile->open(QIODevice::ReadWrite);
     }
 
-    outputFile->write(text.toAscii());
+    outputFile->write(text.toLatin1());
 }
 
 QStringList MainWindow::getArgs()
 {
     QStringList args;
     QString url = ui->rpcServerLine->text();
-    if (!url.contains("http://"))
-        url.prepend("http://");
-    qDebug(url.toAscii());
+//    if (!url.contains("stratum+tcp://"))
+//        url.prepend("stratum+tcp://");
+//    qDebug(url.toLatin1());
     QString urlLine = QString("%1:%2").arg(url, ui->portLine->text());
     QString userpassLine = QString("%1:%2").arg(ui->usernameLine->text(), ui->passwordLine->text());
-    args << "--algo" << "scrypt";
-    args << "-s" << ui->scantimeLine->text().toAscii();
-    args << "--url" << urlLine.toAscii();
-    args << "--userpass" << userpassLine.toAscii();
-    args << "--threads" << ui->threadsBox->currentText().toAscii();
-    args << "-P";
+//    args << "--algo" << "m7mhash";
+//    args << "-s" << ui->scantimeLine->text().toLatin1();
+//    args << "--url" << urlLine.toLatin1();
+    args << "-o" << urlLine.toLatin1();
+    args << "--userpass" << userpassLine.toLatin1();
+    args << "--threads" << ui->threadsBox->currentText().toLatin1();
+//    args << "-P";
     args << ui->parametersLine->text().split(" ", QString::SkipEmptyParts);
 
     return args;
@@ -223,9 +224,9 @@ void MainWindow::startMining()
     initThreads = ui->threadsBox->currentText().toInt();
 
 #ifdef WIN32
-    QString program = "minerd";
+    QString program = "miner/m-minerd";
 #else
-    QString program = "./minerd";
+    QString program = "./miner/m-minerd";
 #endif
 
     minerProcess->start(program,args);
@@ -263,7 +264,7 @@ void MainWindow::stopMining()
 
 void MainWindow::saveSettings()
 {
-    QSettings settings("easyminer.conf", QSettings::IniFormat);
+    QSettings settings("m-cpuminer.conf", QSettings::IniFormat);
 
     settings.setValue("threads", ui->threadsBox->currentText());
     settings.setValue("scantime", ui->scantimeLine->text());
@@ -282,7 +283,7 @@ void MainWindow::saveSettings()
 
 void MainWindow::checkSettings()
 {
-    QSettings settings("easyminer.conf", QSettings::IniFormat);
+    QSettings settings("m-cpuminer.conf", QSettings::IniFormat);
     if (settings.value("threads").isValid())
     {
         int threads = settings.value("threads").toInt();
@@ -379,7 +380,7 @@ void MainWindow::readProcessOutput()
                 threadSpeedstr.remove('\n');
                 double speed=0;
                 speed = threadSpeedstr.toDouble();
-                qDebug(threadSpeedstr.toAscii());
+                qDebug(threadSpeedstr.toLatin1());
 
                 threadSpeed[threadID] = speed;
 
