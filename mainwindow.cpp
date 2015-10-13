@@ -279,12 +279,13 @@ void MainWindow::saveSettings()
     settings.setValue("username", ui->usernameLine->text());
     settings.setValue("password", ui->passwordLine->text());
     settings.setValue("port", ui->portLine->text());
+    settings.setValue("parameters", ui->parametersLine->text());
     settings.setValue("miningPoolIndex", ui->poolBox->currentIndex());
     settings.setValue("poolApiKey", ui->apiKeyLine->text());
     settings.setValue("sharePopup", ui->shareBox->isChecked());
     settings.setValue("minerRestart", ui->restartBox->isChecked());
     settings.setValue("saveOutput", ui->saveOutputBox->isChecked());
-
+    
     settings.sync();
 }
 
@@ -313,8 +314,11 @@ void MainWindow::checkSettings()
     if (settings.value("port").isValid())
         ui->portLine->setText(settings.value("port").toString());
     else
-        ui->portLine->setText("9332");
+        ui->portLine->setText("8232");
 
+    if (settings.value("parameters").isValid())
+        ui->parametersLine->setText(settings.value("parameters").toString());
+    
     if (settings.value("miningPoolIndex").isValid())
         ui->poolBox->setCurrentIndex(settings.value("miningPoolIndex").toInt());
     if (settings.value("poolApiKey").isValid())
