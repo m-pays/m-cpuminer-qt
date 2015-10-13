@@ -44,6 +44,8 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+    QString appDirPath;
+
     QIcon inactiveIcon;
     QIcon activeIcon;
 
@@ -73,6 +75,7 @@ public:
 public slots:
     //
     void changeEvent(QEvent *);
+    void setAppDirPath();
 
     void startPressed();
     void createTrayActions();

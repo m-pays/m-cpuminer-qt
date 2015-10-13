@@ -25,6 +25,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
     setFixedSize(400, 460);
 
+    setAppDirPath();
+
     checkSettings();
 
     minerActive = false;
@@ -84,6 +86,11 @@ MainWindow::~MainWindow()
 
     delete ui;
 }
+
+void MainWindow::setAppDirPath()
+{
+    appDirPath = QApplication::applicationDirPath()+"/";
+ }
 
 void MainWindow::trayIconActivated(QSystemTrayIcon::ActivationReason reason)
 {
@@ -226,7 +233,7 @@ void MainWindow::startMining()
 #ifdef WIN32
     QString program = "miner/m-minerd";
 #else
-    QString program = "./miner/m-minerd";
+    QString program = appDirPath+"./miner/m-minerd";
 #endif
 
     minerProcess->start(program,args);
@@ -264,7 +271,7 @@ void MainWindow::stopMining()
 
 void MainWindow::saveSettings()
 {
-    QSettings settings("m-cpuminer.conf", QSettings::IniFormat);
+    QSettings settings(appDirPath+"m-cpuminer.conf", QSettings::IniFormat);
 
     settings.setValue("threads", ui->threadsBox->currentText());
     settings.setValue("scantime", ui->scantimeLine->text());
@@ -283,7 +290,7 @@ void MainWindow::saveSettings()
 
 void MainWindow::checkSettings()
 {
-    QSettings settings("m-cpuminer.conf", QSettings::IniFormat);
+    QSettings settings(appDirPath+"m-cpuminer.conf", QSettings::IniFormat);
     if (settings.value("threads").isValid())
     {
         int threads = settings.value("threads").toInt();
