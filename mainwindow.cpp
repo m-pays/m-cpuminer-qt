@@ -23,7 +23,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     networkManager = new QNetworkAccessManager(this);
 
-    setFixedSize(400, 460);
+    setFixedSize(430, 460);
 
     setAppDirPath();
 

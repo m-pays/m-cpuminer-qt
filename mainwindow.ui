@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
+    <width>430</width>
     <height>460</height>
    </rect>
   </property>
@@ -23,7 +23,7 @@
    <widget class="QLabel" name="speedTitleLabel">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>11</x>
       <y>0</y>
       <width>131</width>
       <height>31</height>
@@ -36,7 +36,7 @@
    <widget class="QLabel" name="mineSpeedLabel">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>11</x>
       <y>20</y>
       <width>271</width>
       <height>31</height>
@@ -56,11 +56,16 @@
    <widget class="QPushButton" name="startButton">
     <property name="geometry">
      <rect>
-      <x>290</x>
+      <x>320</x>
       <y>10</y>
       <width>101</width>
       <height>31</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <stylestrategy>PreferAntialias</stylestrategy>
+     </font>
     </property>
     <property name="text">
      <string>Start Mining</string>
@@ -71,13 +76,13 @@
      <rect>
       <x>10</x>
       <y>430</y>
-      <width>381</width>
+      <width>411</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>10</pointsize>
+      <pointsize>9</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
@@ -91,7 +96,7 @@
      <rect>
       <x>0</x>
       <y>40</y>
-      <width>411</width>
+      <width>431</width>
       <height>16</height>
      </rect>
     </property>
@@ -104,9 +109,14 @@
      <rect>
       <x>-1</x>
       <y>260</y>
-      <width>404</width>
+      <width>454</width>
       <height>170</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <stylestrategy>PreferAntialias</stylestrategy>
+     </font>
     </property>
     <property name="currentIndex">
      <number>0</number>
@@ -120,7 +130,7 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>398</width>
+        <width>428</width>
         <height>145</height>
        </rect>
       </property>
@@ -163,9 +173,9 @@
      <widget class="QLineEdit" name="apiKeyLine">
       <property name="geometry">
        <rect>
-        <x>160</x>
-        <y>30</y>
-        <width>231</width>
+        <x>180</x>
+        <y>31</y>
+        <width>241</width>
         <height>20</height>
        </rect>
       </property>
@@ -175,7 +185,7 @@
        <rect>
         <x>10</x>
         <y>30</y>
-        <width>141</width>
+        <width>161</width>
         <height>22</height>
        </rect>
       </property>
@@ -194,36 +204,31 @@
         <string>suprnova.cc</string>
        </property>
       </item>
-
       <item>
        <property name="text">
         <string>maxminers.net</string>
        </property>
       </item>
-
       <item>
        <property name="text">
         <string>xmgpool.cf</string>
        </property>
       </item>
-
       <item>
        <property name="text">
         <string>suchpool.pw</string>
        </property>
       </item>
-
       <item>
        <property name="text">
         <string>minerclaim.net</string>
        </property>
       </item>
-
-      </widget>
+     </widget>
      <widget class="QLabel" name="poolLabel">
       <property name="geometry">
        <rect>
-        <x>10</x>
+        <x>11</x>
         <y>10</y>
         <width>141</width>
         <height>16</height>
@@ -236,7 +241,7 @@
      <widget class="QLabel" name="label">
       <property name="geometry">
        <rect>
-        <x>160</x>
+        <x>181</x>
         <y>10</y>
         <width>201</width>
         <height>16</height>
@@ -249,7 +254,7 @@
      <widget class="QPushButton" name="updateButton">
       <property name="geometry">
        <rect>
-        <x>327</x>
+        <x>347</x>
         <y>0</y>
         <width>71</width>
         <height>23</height>
@@ -264,7 +269,7 @@
        <rect>
         <x>10</x>
         <y>60</y>
-        <width>381</width>
+        <width>411</width>
         <height>80</height>
        </rect>
       </property>
@@ -315,8 +320,8 @@
        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Mining pool status hasn't been updated yet.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Droid Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt;&quot;&gt;Mining pool status hasn't been updated yet.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="openLinks">
        <bool>false</bool>
@@ -332,7 +337,7 @@ p, li { white-space: pre-wrap; }
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>398</width>
+        <width>448</width>
         <height>145</height>
        </rect>
       </property>
@@ -341,6 +346,12 @@ p, li { white-space: pre-wrap; }
         <horstretch>0</horstretch>
         <verstretch>0</verstretch>
        </sizepolicy>
+      </property>
+      <property name="font">
+       <font>
+        <family>Droid Serif</family>
+        <pointsize>9</pointsize>
+       </font>
       </property>
       <property name="frameShape">
        <enum>QFrame::NoFrame</enum>
@@ -359,7 +370,7 @@ p, li { white-space: pre-wrap; }
        <rect>
         <x>10</x>
         <y>10</y>
-        <width>381</width>
+        <width>411</width>
         <height>17</height>
        </rect>
       </property>
@@ -372,7 +383,7 @@ p, li { white-space: pre-wrap; }
        <rect>
         <x>10</x>
         <y>30</y>
-        <width>381</width>
+        <width>411</width>
         <height>17</height>
        </rect>
       </property>
@@ -385,7 +396,7 @@ p, li { white-space: pre-wrap; }
        <rect>
         <x>10</x>
         <y>50</y>
-        <width>381</width>
+        <width>411</width>
         <height>17</height>
        </rect>
       </property>
@@ -398,9 +409,9 @@ p, li { white-space: pre-wrap; }
    <widget class="QFrame" name="settingsFrame">
     <property name="geometry">
      <rect>
-      <x>0</x>
+      <x>-1</x>
       <y>50</y>
-      <width>401</width>
+      <width>451</width>
       <height>211</height>
      </rect>
     </property>
@@ -415,7 +426,7 @@ p, li { white-space: pre-wrap; }
       <rect>
        <x>10</x>
        <y>180</y>
-       <width>381</width>
+       <width>411</width>
        <height>20</height>
       </rect>
      </property>
@@ -423,9 +434,9 @@ p, li { white-space: pre-wrap; }
     <widget class="QLabel" name="parametersLabel">
      <property name="geometry">
       <rect>
-       <x>10</x>
+       <x>11</x>
        <y>150</y>
-       <width>131</width>
+       <width>161</width>
        <height>31</height>
       </rect>
      </property>
@@ -438,7 +449,7 @@ p, li { white-space: pre-wrap; }
       <rect>
        <x>10</x>
        <y>130</y>
-       <width>141</width>
+       <width>151</width>
        <height>20</height>
       </rect>
      </property>
@@ -446,9 +457,9 @@ p, li { white-space: pre-wrap; }
     <widget class="QLineEdit" name="passwordLine">
      <property name="geometry">
       <rect>
-       <x>160</x>
+       <x>170</x>
        <y>130</y>
-       <width>141</width>
+       <width>151</width>
        <height>20</height>
       </rect>
      </property>
@@ -456,9 +467,9 @@ p, li { white-space: pre-wrap; }
     <widget class="QLineEdit" name="portLine">
      <property name="geometry">
       <rect>
-       <x>310</x>
+       <x>330</x>
        <y>130</y>
-       <width>81</width>
+       <width>91</width>
        <height>20</height>
       </rect>
      </property>
@@ -469,11 +480,16 @@ p, li { white-space: pre-wrap; }
     <widget class="QLabel" name="rpcUsernameLabel">
      <property name="geometry">
       <rect>
-       <x>10</x>
+       <x>11</x>
        <y>100</y>
-       <width>131</width>
+       <width>155</width>
        <height>31</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
      </property>
      <property name="text">
       <string>Worker or RPC Username</string>
@@ -482,11 +498,16 @@ p, li { white-space: pre-wrap; }
     <widget class="QLabel" name="rpcPasswordLabel">
      <property name="geometry">
       <rect>
-       <x>160</x>
+       <x>171</x>
        <y>100</y>
        <width>131</width>
        <height>31</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
      </property>
      <property name="text">
       <string>Password</string>
@@ -495,14 +516,19 @@ p, li { white-space: pre-wrap; }
     <widget class="QLabel" name="rpcPortLabel">
      <property name="geometry">
       <rect>
-       <x>310</x>
+       <x>331</x>
        <y>100</y>
        <width>131</width>
        <height>31</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
      <property name="text">
-      <string>Port (Pool or RPC)</string>
+      <string>Port</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="rpcServerLine">
@@ -510,7 +536,7 @@ p, li { white-space: pre-wrap; }
       <rect>
        <x>10</x>
        <y>80</y>
-       <width>381</width>
+       <width>411</width>
        <height>20</height>
       </rect>
      </property>
@@ -518,14 +544,20 @@ p, li { white-space: pre-wrap; }
     <widget class="QLabel" name="rpcServerLabel">
      <property name="geometry">
       <rect>
-       <x>10</x>
+       <x>11</x>
        <y>50</y>
-       <width>381</width>
+       <width>431</width>
        <height>31</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>Droid Sans</family>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
      <property name="text">
-      <string>Pool URL ("stratum+tcp://...") or RPC Server ("http://..." - solo mining)</string>
+      <string>Pool URL (&quot;stratum+tcp://...&quot;) or RPC Server (&quot;http://...&quot; - solo mining)</string>
      </property>
     </widget>
     <widget class="QComboBox" name="threadsBox">
@@ -533,7 +565,7 @@ p, li { white-space: pre-wrap; }
       <rect>
        <x>10</x>
        <y>30</y>
-       <width>191</width>
+       <width>201</width>
        <height>22</height>
       </rect>
      </property>
@@ -581,11 +613,16 @@ p, li { white-space: pre-wrap; }
     <widget class="QLabel" name="threadsLabel">
      <property name="geometry">
       <rect>
-       <x>10</x>
+       <x>11</x>
        <y>0</y>
        <width>191</width>
        <height>31</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
      </property>
      <property name="text">
       <string>Threads</string>
@@ -594,11 +631,18 @@ p, li { white-space: pre-wrap; }
     <widget class="QLabel" name="scantimeLabel">
      <property name="geometry">
       <rect>
-       <x>210</x>
+       <x>231</x>
        <y>0</y>
        <width>181</width>
        <height>31</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Droid Sans</family>
+       <pointsize>10</pointsize>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
      </property>
      <property name="text">
       <string>Scantime</string>
@@ -607,9 +651,9 @@ p, li { white-space: pre-wrap; }
     <widget class="QLineEdit" name="scantimeLine">
      <property name="geometry">
       <rect>
-       <x>210</x>
-       <y>30</y>
-       <width>181</width>
+       <x>230</x>
+       <y>31</y>
+       <width>191</width>
        <height>20</height>
       </rect>
      </property>
